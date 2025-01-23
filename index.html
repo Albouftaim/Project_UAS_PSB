@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Puskesmas STTNF Depok - Melayani dengan sepenuh hati untuk kesehatan masyarakat">
+    <title>Puskesmas Sehat Bersama</title>
+    <link rel="icon" type="image/png" href="img/puskesmas.png">
+
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!--  Styles -->
+    <style>
+        @media (max-width: 768px) {
+            .menu-open {
+                display: block;
+            }
+        }
+        .footer {
+            background-color: #111;
+            padding: 40px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            color: #ffffff;
+        }
+        .footer-column {
+            flex: 1;
+            min-width: 200px;
+            margin: 10px;
+        }
+        .footer-column h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .footer-column p, .footer-column a {
+            font-size: 14px;
+            color: #ccc;
+            text-decoration: none;
+            margin-bottom: 10px;
+            display: block;
+            text-align: center;
+            margin-left: 20px;
+            
+        }
+        .footer-column a:hover {
+            color: #fff;
+        }
+        .social-icons {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+        .social-icons a {
+            color: #ccc;
+            font-size: 24px;
+            text-decoration: none;
+        }
+        .social-icons a:hover {
+            color: #fff;
+        }
+        .footer-bottom {
+            background-color: #1a1a1a;
+            text-align: center;
+            padding: 10px 20px;
+            font-size: 14px;
+            color: #ccc;
+        }
+        @media (max-width: 768px) {
+            .footer {
+                flex-direction: column;
+                align-items: center;
+            }
+            .footer-column {
+                margin: 20px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white text-black z-50">
+        <div class="container mx-auto px-6">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <a href="#home" class="text-2xl font-bold flex items-center space-x-2">
+                    <img src="img/puskesmas.png" alt="Logo" class="w-15 h-12">
+                    <span class="text-black"></span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#services" class="hover:text-teal-500 transition">Layanan</a>
+                    <a href="#doctors" class="hover:text-teal-500 transition">Dokter</a>
+                    <a href="#testimoni" class="hover:text-teal-500 transition">Testimoni</a>
+                    <a href="#about" class="hover:text-teal-500 transition">About</a>
+                    <a href="views/login.html" class="bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition">Login</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="menuToggle" class="md:hidden">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden pb-6">
+                <a href="#services" class="block py-2 hover:text-teal-500 transition">Layanan</a>
+                <a href="#testimoni" class="block py-2 hover:text-teal-500 transition">Testimoni</a>
+                <a href="#doctors" class="block py-2 hover:text-teal-500 transition">Dokter</a>
+                <a href="#about" class="block py-2 hover:text-teal-500 transition">Tentang</a>
+                <a href="views/login.html" class="block py-2 text-white-500 hover:text-teal-500 transition">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+<section id="home" class="pt-24 bg-black text-white min-h-screen flex items-center relative">
+    <div class="absolute inset-0 bg-cover bg-center opacity-50" style="background-image: url('img/puskesmas1.png');"></div>
+    <div class="container mx-auto px-6 text-center relative z-10">
+        <h1 class="text-5xl font-bold mb-6">Welcome to Puskesmas Sehat Bersama</h1>
+        <p class="text-xl text-white-400 mb-8">
+            Jl. Teknologi No. 99, Blok A Cyber City, Jakarta Selatan
+        </p>
+        <a href="#services" class="bg-teal-600 text-white px-8 py-3 rounded-lg text-lg hover:bg-teal-700 transition">
+            Lihat Layanan Poli
+        </a>
+    </div>
+</section>
+
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Layanan Poli Kami</h2>
+                <p class="text-gray-600">Melayani berbagai kebutuhan kesehatan Anda dengan profesional</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Service Card 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <div class="p-8">
+                        <div class="flex items-start space-x-6">
+                            <img src="img/poligigi.jpg" alt="Pelayanan Gigi" class="w-24 h-24 object-cover rounded-lg">
+                            <div>
+                                <h3 class="text-xl font-bold mb-3">Poli Gigi</h3>
+                                <p class="text-gray-600 mb-4">
+                                    Layanan kesehatan gigi yang lengkap dan terpercaya. Kami menyediakan pemeriksaan rutin, perawatan gigi, hingga tindakan medis gigi yang diperlukan.
+                                </p>
+                                <a href="./Poli-PL/gigi.html" class="text-black hover:text-teal-600 transition">  More Informasion
+                                    </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <div class="p-8">
+                        <div class="flex items-start space-x-6">
+                            <img src="img/poliibu.webp" alt="Poli Anak & Ibu"
+                                class="w-24 h-24 object-cover rounded-lg">
+                            <div>
+                                <h3 class="text-xl font-bold mb-3">Poli Anak & Ibu (KIA) </h3>
+                                <p class="text-gray-600 mb-4">
+                                    Layanan pemeriksaan kehamilan dan tumbuh kembang anak serta Perawatan kesehatan menyeluruh untuk ibu dan anak.
+                                </p>
+                                <a href="./Poli-PL/KIA.html" class="text-black hover:text-teal-600 transition">More Informasion
+                                    </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <div class="p-8">
+                        <div class="flex items-start space-x-6">
+                            <img src="img/polikb.jpg" alt="Poli Keluarga Berencana" class="w-24 h-24 object-cover rounded-lg">
+                            <div>
+                                <h3 class="text-xl font-bold mb-3">Poli Keluarga Berencana (KB)</h3>
+                                <p class="text-gray-600 mb-4">
+                                  Membantu membangun keluarga harmonis dan sehat dan Perencanaan kehamilan untuk masa depan yang cerah                              </p>
+                                <a href="./Poli-PL/KB.html" class="text-black hover:text-teal-600 transition">More Informasion
+                                    </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <div class="p-8">
+                        <div class="flex items-start space-x-6">
+                            <img src="img/poliumum.png" alt="Poli Umum" class="w-24 h-24 object-cover rounded-lg">
+                            <div>
+                                <h3 class="text-xl font-bold mb-3">Poli Umum</h3>
+                                <p class="text-gray-600 mb-4">
+                                    Layanan kesehatan untuk keluhan sakit umum, seperti demam, batuk, pilek, dan sakit umum lainnya.
+                                </p>
+                                <a href="./Poli-PL/umum.html" class="text-black hover:text-teal-600 transition">More Informasion
+                                    </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctors Section -->
+    <section id="doctors" class="py-20 bg-white text-black">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Dokter</h2>
+                <p class="text-gray-600">Dokter-dokter profesional kami siap memberikan pelayanan terbaik untuk Anda</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Doctor 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
+                    <img src="img/sayyed.jpg" alt="Sayed Muhammad Qadri" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">Sayed Muhammad Qadri S.Kom S.Ked</h3>
+                        <p class="text-teal-500 font-semibold mb-4">Dokter Gigi</p>
+                        <p class="text-gray-600 text-sm">
+                            "Menjadi dokter gigi adalah tentang melayani, menyembuhkan, dan membawa kembali kepercayaan
+                            diri. Karena setiap senyuman punya cerita."
+                        </p>
+                        <br>
+                        <div class="flex items-center space-x-4 mt-4">
+                            <!-- Instagram -->
+                            <a href="https://www.instagram.com/sayyid_albouftaim/" target="_blank" aria-label="Instagram">
+                                <svg class="h-5 w-5 text-black hover:text-teal-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                                </svg>
+                            </a>
+                            <!-- GitHub -->
+                            <a href="https://github.com/Albouftaim" target="_blank" aria-label="GitHub">
+                                <svg class="h-5 w-5 text-black hover:text-teal-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                                </svg>
+                            </a>
+                            <!-- LinkedIn -->
+                            <a href="https://www.linkedin.com/in/sayed-muhammad-qadri-5b4193294/" target="_blank" aria-label="LinkedIn">
+                                <svg class="h-5 w-5 text-black hover:text-teal-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                    <rect x="2" y="9" width="4" height="12" />
+                                    <circle cx="4" cy="4" r="2" />
+                                </svg>
+                            </a>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <!-- Doctor 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
+                    <img src="img/rizza.jpg" alt="Dr. Riza alfira"
+                        class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">Dr. Riza alfira S.Ked</h3>
+                        <p class="text-teal-500 font-semibold mb-4">Dokter Umum</p>
+                        <p class="text-gray-600 text-sm">
+                            "Setiap senyum kecil adalah tanggung jawab besar. Saya percaya bahwa kesehatan anak-anak
+                            adalah fondasi masa depan yang lebih baik." 
+                        </p>
+                        <br>
+                        <br>
+                        <div class="flex items-center space-x-4 mt-4">
+                            <!-- Instagram -->
+                            <a href="https://www.instagram.com/riizalfiranst/" target="_blank" aria-label="Instagram">
+                                <svg class="h-5 w-5 text-black hover:text-teal-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                                </svg>
+                            </a>
+                            <!-- GitHub -->
+                            <a href="https://www.github.com" target="_blank" aria-label="GitHub">
+                                <svg class="h-5 w-5 text-black hover:text-teal-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                                </svg>
+                            </a>
+                            <!-- LinkedIn -->
+                            <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
+                                <svg class="h-5 w-5 text-black hover:text-teal-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                    <rect x="2" y="9" width="4" height="12" />
+                                    <circle cx="4" cy="4" r="2" />
+                                </svg>
+                            </a>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+
+                <!-- Doctor 3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
+                    <img src="img/linda.jpg" alt="Dr.Linda Agistina"
+                        class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">Dr.Linda Agistina S.Ked</h3>
+                        <p class="text-teal-500 font-semibold mb-4">Dokter Keluarga Berencana</p>
+                        <p class="text-gray-600 text-sm">
+                            "Setiap kerutan di wajah mereka menyimpan cerita. Sebagai dokter lansia, saya merasa
+                            terhormat membantu mereka menikmati hari-hari dengan kesehatan dan kenyamanan yang layak
+                            mereka dapatkan."
+                        </p>
+                        <br>
+                        <div class="flex items-center space-x-4 mt-4">
+                            <!-- Instagram -->
+                            <a href="https://www.instagram.com/lindaagstna11/" target="_blank" aria-label="Instagram">
+                                <svg class="h-5 w-5 text-black hover:text-teal-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                                </svg>
+                            </a>
+                            <!-- GitHub -->
+                            <a href="https://www.github.com" target="_blank" aria-label="GitHub">
+                                <svg class="h-5 w-5 text-black hover:text-teal-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                                </svg>
+                            </a>
+                            <!-- LinkedIn -->
+                            <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
+                                <svg class="h-5 w-5 text-black hover:text-teal-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                    <rect x="2" y="9" width="4" height="12" />
+                                    <circle cx="4" cy="4" r="2" />
+                                </svg>
+                            </a>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+
+                <!-- Doctor 4 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
+                    <img src="img/ecan.jpg" alt="Dr. Rama Aditia"
+                        class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">Dr. Haechan S.Ked</h3>
+                        <p class="text-teal-500 font-semibold mb-4">Dokter Anak & Ibu</p>
+                        <p class="text-gray-600 text-sm">
+                            "Kesehatan dimulai dari apa yang kita makan. Sebagai dokter gizi, misi saya adalah
+                            memberikan panduan untuk hidup sehat dan menciptakan hubungan positif dengan makanan."
+                        </p>
+                        <br>
+                        <div class="flex items-center space-x-4 mt-4">
+                            <!-- Instagram -->
+                            <a href="https://www.instagram.com/adithst/" target="_blank" aria-label="Instagram">
+                                <svg class="h-5 w-5 text-black hover:text-teal-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                                </svg>
+                            </a>
+                            <!-- GitHub -->
+                            <a href="https://www.github.com" target="_blank" aria-label="GitHub">
+                                <svg class="h-5 w-5 text-black hover:text-teal-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                                </svg>
+                            </a>
+                            <!-- LinkedIn -->
+                            <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
+                                <svg class="h-5 w-5 text-black hover:text-teal-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                    <rect x="2" y="9" width="4" height="12" />
+                                    <circle cx="4" cy="4" r="2" />
+                                </svg>
+                            </a>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimoni Section -->
+<section id="testimoni" class="py-20 bg-gray-100">
+  <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold mb-4">Review Pasien</h2>
+          <p class="text-gray-600">Testimoni dari para pasien yang telah berobat di Puskesmas Sehat Bersama.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!--Review 1 -->
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+              <div class="p-6 text-center">
+                  <img src="img/ela.jpg" alt="Testimoni 1" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+                  <h3 class="font-bold text-xl mb-2">Grabiela Octaviani</h3>
+                  <p class="text-gray-600 text-sm">
+                      "Pelayanan dan berobat di Puskesmas Sehat Bersama sangat baik, petugas ramah, dan dokter profesional. Prosesnya cepat dan memuaskan!"
+                  </p>
+              </div>
+          </div>
+
+          <!--Review 2 -->
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+              <div class="p-6 text-center">
+                  <img src="img/raka.jpg" alt="Testimoni 2" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+                  <h3 class="font-bold text-xl mb-2">Raka Dwi Putra</h3>
+                  <p class="text-gray-600 text-sm">
+                    "Dokternya ramah dan teliti, penanganannya cepat dan jelas. Poli umum di sini benar-benar nyaman untuk berobat!"
+                  </p>
+              </div>
+          </div>
+
+          <!--Review 3 -->
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+              <div class="p-6 text-center">
+                  <img src="img/andy.jpg" alt="Testimoni 3" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+                  <h3 class="font-bold text-xl mb-2">Dzakwan Abi Rahmat</h3>
+                  <p class="text-gray-600 text-sm">
+                    "Saya sangat senang dokternya sangat sabar dan perhatian, baik ke istri maupun anak saya. Penjelasannya jelas, dan anak jadi nyaman saat diperiksa. Poli Anak & Ibu di sini sangat memuaskan!"
+                  </p>
+              </div>
+          </div>
+
+          <!--Review 4 -->
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+              <div class="p-6 text-center">
+                  <img src="img/ikal.jpg" alt="Testimoni 4" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+                  <h3 class="font-bold text-xl mb-2">Haikal Kurniawan</h3>
+                  <p class="text-gray-600 text-sm">
+                    "Poli Keluarga Berencana sangat membantu, dengan edukasi yang jelas dan informatif. Kami jadi lebih paham cara merencanakan keluarga dengan baik, suasananya juga nyaman untuk berdiskusi bersama."
+                  </p>
+              </div>
+          </div>
+
+         <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+          <div class="p-6 text-center">
+              <img src="img/uje.jpg" alt="Testimoni 4" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+              <h3 class="font-bold text-xl mb-2">Uje Pratama</h3>
+              <p class="text-gray-600 text-sm">
+                "Pengalaman rawat inap di sini sangat baik. Pelayanan dari dokter dan perawat sangat ramah dan perhatian, membuat saya merasa nyaman selama pemulihan. Fasilitas juga mendukung untuk istirahat dengan nyaman."
+              </p>
+      </div>
+  </div>
+  <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+              <div class="p-6 text-center">
+                  <img src="img/bocah.jpg" alt="Testimoni 4" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+                  <h3 class="font-bold text-xl mb-2">Adina Putri</h3>
+                  <p class="text-gray-600 text-sm">
+                    "Imunisasi berjalan lancar, bidan dan dokternya sangat sabar serta teliti. Anak kami merasa nyaman, dan kami juga mendapat edukasi penting tentang imunisasi. Terima kasih!"
+                  </p>
+            </div>
+      </div>
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+      <div class="p-6 text-center">
+          <img src="img/mici.jpg" alt="Testimoni 4" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+          <h3 class="font-bold text-xl mb-2">Michelle Alexandra</h3>
+          <p class="text-gray-600 text-sm">
+            "Pelayanan di poli kandungan sangat memuaskan. Dokternya sangat perhatian dan sabar dalam menjelaskan kondisi saya. Kami merasa sangat nyaman dan mendapatkan banyak informasi yang berguna untuk kesehatan kehamilan.""
+          </p>
+      </div>
+      </div>
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+      <div class="p-6 text-center">
+          <img src="img/fadil.jpg" alt="Testimoni 4" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+          <h3 class="font-bold text-xl mb-2">Muhammad Fadil</h3>
+          <p class="text-gray-600 text-sm">
+            "Perawatan di poli gigi sangat baik, dokternya teliti dan ramah. Prosesnya nyaman, dan gigi saya ditangani dengan sangat profesional sehingga tidak merasakan sakit."
+          </p>
+      </div>
+      </div>
+  </div>
+</section>
+    
+
+    <!-- About Section -->
+    <section id="about" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row gap-12">
+                <div class="md:w-1/2">
+                    <img src="img/pus1.webp" alt="Puskesmas Sehat Bersama"
+                        class="rounded-xl shadow-lg w-full h-[400px] object-cover">
+                </div>
+
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Tentang Puskesmas Sehat Bersama</h2>
+                    <p>
+Puskesmas Sehat Bersama adalah fasilitas pelayanan kesehatan yang berkomitmen untuk memberikan pelayanan kesehatan yang berkualitas kepada masyarakat. Kami melayani berbagai kebutuhan medis mulai dari pemeriksaan kesehatan umum, vaksinasi, hingga perawatan khusus sesuai dengan standar kesehatan yang berlaku.
+Dengan didukung oleh tenaga medis yang profesional dan fasilitas yang memadai, Puskesmas Sehat Bersama berusaha untuk meningkatkan kesehatan masyarakat dan mendukung program-program kesehatan pemerintah. Kami memiliki visi untuk menjadi pusat kesehatan yang terdepan dalam memberikan pelayanan yang cepat, tepat, dan ramah.
+                    </p>
+                    <br>
+                    <p>
+                        Kami percaya bahwa kesehatan adalah hak setiap individu, dan oleh karena itu, kami berkomitmen untuk memberikan pelayanan kesehatan yang dapat diakses oleh semua lapisan masyarakat. Dengan semangat kebersamaan, kami terus berupaya untuk mewujudkan Puskesmas Sehat Bersama sebagai bagian penting dalam meningkatkan kualitas hidup masyarakat.
+                    </p>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-column">
+            <h3>Puskesmas Sehat Bersama</h3>
+            <p class="">Puskesmas Sehat Bersama, kita wujudkan masyarakat sehat, mandiri, dan sejahtera. Bersama melangkah, bersama menjaga, karena kesehatan adalah milik kita semua. Bersama Puskesmas Sehat Bersama, mari wujudkan hidup yang lebih sehat, aktif, dan penuh semangat!</p>
+            <div class="social-icons">
+                <a href="https://api.whatsapp.com/send/?app_absent=0&phone=622150868889&text=Halo+LifepackNama+%3A+Umur+%3A+Saya+ingin+konsultasi+dengan+dokter+dan+mendapatkan+resep+obat."><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.facebook.com/UPK.KemenkesRI/"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/puskesmaskebayoranbaru/"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@albouftaim"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.linkedin.com/company/rspondokindah/"><i class="fab fa-linkedin-in"></i></a>
+
+            </div>
+        </div>
+        <div class="footer-column">
+            <h3>Useful Links</h3>
+        <a href="#home">Home</a>
+        <a href="#about">About us</a>
+        <a href="#services">Services</a>
+        <a href="#testimoni">Riview</a>
+    </div>
+    <div class="footer-column">
+        <h3>Hubungi Kami</h3>
+        <p>Puskesmas Sehat Bersama</p>
+        <p>Jl Margonda Raya Depok</p>
+        <p>Indonesia</p>
+        <p>Phone: +62 34876543</p>
+        <p>Email: infosehat@Puskesmatsehatbersama.ac.id</p>
+    </div>
+</footer>
+<div class="footer-bottom">
+    <div class="container copyright text-center mt-4">
+        <p>©2025<span> Copyright</span> <strong class="px-1 sitename">Puskesmas Sehat Bersama</strong> <span>Semua Hak Dilindungi</span></p>
+
+    <!-- Scripts Js -->
+    <script src="./backend/script.js "></script>
+    <script src="./css/styles.css"></script>
+</body>
+
+</html>

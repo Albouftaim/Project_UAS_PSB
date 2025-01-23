@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" type="image/png" href="../img/puskesmas.png">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 flex items-center justify-center min-h-screen">
+
+    <!-- Login -->
+    <!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ffffff, #1c6c60, #ffffff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #333;
+        }
+        .login-container {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.3s;
+        }
+        .login-container:hover {
+            transform: scale(1.02);
+        }
+        h1 {
+            margin-bottom: 15px;
+            font-size: 22px;
+            color: #1c1b1b;
+            font-weight: 700;
+            text-align: center;
+        }
+        .input-group {
+            margin-bottom: 10px;
+            width: 100%;
+            text-align: left;
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+            font-weight: 600;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 8px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            outline: none;
+            transition: border-color 0.3s;
+            font-size: 14px;
+        }
+        .input-group input:focus {
+            border-color: #1bbca3;
+        }
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #25ac98;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 700;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .btn:hover {
+            background-color: #129582;
+            transform: translateY(-2px);
+        }
+        .footer {
+            margin-top: 15px;
+            font-size: 0.8em;
+            color: #999;
+            text-align: center;
+        }
+        .error-message {
+            color: red;
+            font-size: 12px;
+            margin-top: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <h1>Login Dashboard</h1>
+    <form id="loginForm">
+        <div class="input-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <button type="submit" class="btn">Masuk</button>
+    </form>
+    <div id="errorMessage" class="error-message"></div>
+    <div class="footer">
+        <a href="regist.html" class="text-teal-600 hover:underline">Daftar Akun</a>
+        <br>
+        <a href="forgot.html" class="text-teal-600 hover:underline">Forgot Password!!</a>
+
+
+        <br>
+        <br>
+        &copy; Puskesmas Sehat Bersama
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
